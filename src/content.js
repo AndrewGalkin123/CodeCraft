@@ -4,7 +4,8 @@ const content = [
         description: "Удаляет последний элемент из массива и возвращает его.",
         examples: [
             "const arr = [1, 2, 3];",
-            "const lastElement = arr.pop(); // lastElement = 3, arr = [1, 2]",
+            "const lastElement = arr.pop();",
+            "lastElement = 3, arr = [1, 2]"
         ],
     },
     {

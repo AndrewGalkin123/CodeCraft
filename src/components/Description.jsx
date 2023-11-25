@@ -1,11 +1,18 @@
-import { Divider,Typography } from 'antd'
+import { Divider, Typography } from 'antd'
 
-const Description = ({description}) => {
+const Description = ({ title, description, example }) => {
+
+
     return (
-            <div style={{ padding: '20px' }}>
-                <Typography.Title level={3}>{description}</Typography.Title>
-            </div>
-    )
-}
+        <div style={{ padding: '20px' }}>
+            <Typography.Title level={2}>{title}</Typography.Title>
+            <Divider />
+            <Typography.Paragraph>{description}</Typography.Paragraph>
+            <Typography.Text code>
+               {example}
+            </Typography.Text>
+        </div>
+    );
+};
 
-export default Description
+export default Description;
