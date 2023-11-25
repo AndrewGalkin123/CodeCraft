@@ -1,33 +1,35 @@
+import React, { useState } from 'react';
 import './App.css';
 import { Row, Col } from "antd"
 import Header from './components/Header';
 import _Menu from './components/Menu';
-function App() {
-  const methods = ["arr.pop()",
-  "arr.push()",
-  "arr.shift()",
-  "arr.unshift()",
-  "arr.slice(start, end)",
-  "arr.splice(start, deleteCount, item1, ..., itemN)",
-  "arr.concat(array1, array2, ..., arrayN)",
-  "arr.indexOf(element)",
-  "arr.lastIndexOf(element)",
-  "arr.forEach(callback)",
-  ]
+import content from './content';
+import Description from './components/Description';
+
+const App = () => {
+  const methods = content.map(item => item.method);
+  const descriptions = content.map(item => item.description);
+  const [description, setDescription] = useState(descriptions[0]);
+ 
+  const handleMenuSelect = (selectedMethod) => {
+    const index = methods.indexOf(selectedMethod);
+    setDescription(descriptions[index]);
+  };
   return (
     <div>
-      <Header title="CodeCraft"></Header>
-
+      <Header title="CodeCraft" />
       <Row>
         <Col xs={10} md={3}>
-          <_Menu methods={methods}></_Menu>
+          <_Menu methods={methods}  onSelect={handleMenuSelect}/>
+        </Col>
+        <Col xs={14} md={21}>
+          <Description description={description}></Description>
         </Col>
       </Row>
-
-
-
     </div>
   );
-}
+};
 
 export default App;
+
+
