@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { Row, Col } from "antd"
+import Header from './components/Header';
+import _Menu from './components/Menu';
 function App() {
+  const methods = ["arr.pop()",
+  "arr.push()",
+  "arr.shift()",
+  "arr.unshift()",
+  "arr.slice(start, end)",
+  "arr.splice(start, deleteCount, item1, ..., itemN)",
+  "arr.concat(array1, array2, ..., arrayN)",
+  "arr.indexOf(element)",
+  "arr.lastIndexOf(element)",
+  "arr.forEach(callback)",
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header title="CodeCraft"></Header>
+
+      <Row>
+        <Col xs={10} md={3}>
+          <_Menu methods={methods}></_Menu>
+        </Col>
+      </Row>
+
+
+
     </div>
   );
 }
