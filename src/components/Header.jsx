@@ -23,9 +23,7 @@ const Header = ({ title }) => {
                     size="medium"
 
                 />
-
             </header>
-
             <Divider></Divider>
 
         </>
