@@ -5,6 +5,7 @@ import Header from './components/Header';
 import _Menu from './components/Menu';
 import content from './content';
 import Description from './components/Description';
+import "./App.css"
 
 const App = () => {
   const methods = content.map(item => item.method);

@@ -8,9 +8,10 @@ const Description = ({ title, description, example }) => {
             <Typography.Title level={2}>{title}</Typography.Title>
             <Divider />
             <Typography.Paragraph>{description}</Typography.Paragraph>
-            <Typography.Text code>
-               {example}
-            </Typography.Text>
+
+            {example.map(el => <><Typography.Text code>{el}</Typography.Text><br/></>)}
+
+
         </div>
     );
 };

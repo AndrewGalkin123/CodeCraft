@@ -1,10 +1,33 @@
-import { Divider,Typography } from 'antd'
+import { Divider, Typography, Input, Row, Col } from 'antd'
+import Navigation from './Navigation';
 
-const Header = ({title}) => {
+const { Search } = Input;
+const Header = ({ title }) => {
     return (
         <>
-            <header style={{padding: "0 20px"}}><Typography.Title level={3}>{title}</Typography.Title></header>
+            <header style={{padding: "20px"}}>
+                    <Row>
+                        <Col  xs={21}>
+                            <Typography.Title level={2}>{title}</Typography.Title>
+                        </Col>
+                        <Col xs={3}>
+                            <Navigation />
+                        </Col>
+
+                    </Row>
+
+                <Search
+                    placeholder="Search methods"
+                    allowClear
+                    enterButton="Search"
+                    size="medium"
+
+                />
+
+            </header>
+
             <Divider></Divider>
+
         </>
     )
 }
