@@ -14,20 +14,27 @@ const App = () => {
   const [selectedMethod, setSelectedMethod] = useState(methods[0]);
   const [description, setDescription] = useState(descriptions[0]);
   const [example, setExample] = useState(examples[0]);
+  const [searchedMethods,setSearchedMethods] = useState(methods)
 
   const handleMenuSelect = (selectedMethod) => {
     const index = methods.indexOf(selectedMethod);
     setSelectedMethod(selectedMethod);
     setDescription(descriptions[index]);
     setExample(examples[index])
-  };
 
+  };
+ 
+  const handleMenuSearch = (value) => {
+    setSearchedMethods(methods.filter(method => method.includes(value.currentTarget.value)))
+  }
+  
   return (
     <div>
-      <Header title="CodeCraft" />
+      <Header search={handleMenuSearch} title="CodeCraft" />
       <Row>
         <Col xs={10} md={3}>
-          <_Menu methods={methods} onSelect={handleMenuSelect} />
+          <_Menu methods={searchedMethods} onSelect={handleMenuSelect} />
+       
         </Col>
         <Col xs={14} md={21}>
           <Description example={example} title={selectedMethod} description={description} />

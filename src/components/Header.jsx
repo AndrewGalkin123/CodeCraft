@@ -2,7 +2,7 @@ import { Divider, Typography, Input, Row, Col } from 'antd'
 import Navigation from './Navigation';
 
 const { Search } = Input;
-const Header = ({ title }) => {
+const Header = ({ title, search }) => {
     return (
         <>
             <header style={{padding: "20px"}}>
@@ -21,7 +21,7 @@ const Header = ({ title }) => {
                     allowClear
                     enterButton="Search"
                     size="medium"
-
+                    onChange={search}
                 />
             </header>
             <Divider></Divider>
