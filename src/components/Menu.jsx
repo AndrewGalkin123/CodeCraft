@@ -8,17 +8,19 @@ const _Menu = ({ methods, onSelect }) => {
     };
 
     return (
-        <Menu
-            mode="vertical"
-            defaultSelectedKeys={['1']}
-            defaultOpenKeys={['sub1']}
-            theme="light"
-            onClick={handleMenuClick}
-        >
-            {
-                methods.map(method => <Menu.Item icon={<CodeOutlined />} key={method}>{method}</Menu.Item>)
-            }
-        </Menu>
+        <div style={{ height: '100vh', overflowY: 'auto' }}>
+            <Menu
+                mode="vertical"
+                defaultSelectedKeys={['1']}
+                defaultOpenKeys={['sub1']}
+                theme="light"
+                onClick={handleMenuClick}
+            >
+                {
+                    methods.map(method => <Menu.Item icon={<CodeOutlined />} key={method}>{method}</Menu.Item>)
+                }
+            </Menu>
+        </div>
     )
 }
 

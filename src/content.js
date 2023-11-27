@@ -180,6 +180,119 @@ const content = [
             "isoString = '2023-11-27T12:34:56.789Z'"
         ],
     },
+    {
+        method: "arr.find(callback)",
+        description: "Возвращает значение первого элемента массива, удовлетворяющего условию, заданному в переданной функции.",
+        examples: [
+            "const arr = [1, 2, 3, 4, 5];",
+            "const firstEven = arr.find(num => num % 2 === 0);",
+            "firstEven = 2"
+        ],
+    },
+    {
+        method: "arr.findIndex(callback)",
+        description: "Возвращает индекс первого элемента массива, удовлетворяющего условию, заданному в переданной функции. Если элемент не найден, возвращает -1.",
+        examples: [
+            "const arr = [1, 2, 3, 4, 5];",
+            "const indexOfFirstEven = arr.findIndex(num => num % 2 === 0);",
+            "indexOfFirstEven = 1"
+        ],
+    },
+    {
+        method: "arr.includes(element)",
+        description: "Проверяет, содержит ли массив указанный элемент. Возвращает true, если элемент найден, иначе false.",
+        examples: [
+            "const arr = [1, 2, 3, 4, 5];",
+            "const includesThree = arr.includes(3);",
+            "includesThree = true"
+        ],
+    },
+    {
+        method: "arr.flat(depth)",
+        description: "Создает новый массив, в котором все подмассивы внутри исходного массива объединены в один уровень. Глубина объединения может быть указана с помощью параметра depth.",
+        examples: [
+            "const arr = [1, [2, [3, 4]], 5];",
+            "const flatArray = arr.flat(2);",
+            "flatArray = [1, 2, 3, 4, 5]"
+        ],
+    },
+    {
+        method: "str.trim()",
+        description: "Удаляет пробельные символы с начала и конца строки.",
+        examples: [
+            "const str = '   Hello, World!   ';",
+            "const trimmedStr = str.trim();",
+            "trimmedStr = 'Hello, World!'"
+        ],
+    },
+    {
+        method: "str.substring(start, end)",
+        description: "Возвращает подстроку строки между индексами start и end (не включительно).",
+        examples: [
+            "const str = 'Hello, World!';",
+            "const substring = str.substring(7, 12);",
+            "substring = 'World'"
+        ],
+    },
+    {
+        method: "str.substr(start, length)",
+        description: "Возвращает подстроку строки, начиная с индекса start и имеющую длину length.",
+        examples: [
+            "const str = 'Hello, World!';",
+            "const substr = str.substr(7, 5);",
+            "substr = 'World'"
+        ],
+    },
+    {
+        method: "str.replace(searchValue, replaceValue)",
+        description: "Заменяет первое вхождение searchValue в строке на replaceValue.",
+        examples: [
+            "const str = 'Hello, World!';",
+            "const replacedStr = str.replace('World', 'GPT');",
+            "replacedStr = 'Hello, GPT!'"
+        ],
+    },
+    {
+        method: "str.split(separator)",
+        description: "Разделяет строку на массив подстрок, используя указанный разделитель.",
+        examples: [
+            "const str = 'apple,orange,banana';",
+            "const fruitArray = str.split(',');",
+            "fruitArray = ['apple', 'orange', 'banana']"
+        ],
+    },
+    {
+        method: "Math.random()",
+        description: "Возвращает псевдослучайное число от 0 (включительно) до 1 (не включительно).",
+        examples: [
+            "const randomNum = Math.random();",
+            "// Example output: 0.8543713276878362"
+        ],
+    },
+    {
+        method: "Math.floor(num)",
+        description: "Возвращает наибольшее целое число, меньшее или равное указанному числу.",
+        examples: [
+            "const roundedDown = Math.floor(3.8);",
+            "roundedDown = 3"
+        ],
+    },
+    {
+        method: "Math.ceil(num)",
+        description: "Возвращает наименьшее целое число, большее или равное указанному числу.",
+        examples: [
+            "const roundedUp = Math.ceil(3.2);",
+            "roundedUp = 4"
+        ],
+    },
+    {
+        method: "Math.round(num)",
+        description: "Возвращает ближайшее целое число, округляя вверх или вниз в зависимости от десятичной части.",
+        examples: [
+            "const rounded = Math.round(3.5);",
+            "rounded = 4"
+        ],
+    }
 ];
 
 export default content;
