@@ -7,7 +7,7 @@ const Description = ({ title, description, example }) => {
         <div style={{ padding: '20px' }}>
             <Typography.Title level={2}>{title}</Typography.Title>
             <Divider />
-            <Typography.Paragraph>{description}</Typography.Paragraph>
+            <Typography.Paragraph style={{fontSize: "18px"}}>{description}</Typography.Paragraph>
 
             {example.map(el => <><Typography.Text code>{el}</Typography.Text><br/></>)}
 
