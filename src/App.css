@@ -1,5 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    
+
+}
+
+.code {
+    font-family: 'Courier New', monospace;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    white-space: pre-wrap;
+
 }
