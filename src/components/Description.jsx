@@ -1,6 +1,6 @@
 import { Divider, Typography } from 'antd'
 
-const Description = ({ title, description, syntax, basicExample, basicExampleResult, cycleExample, cycleExampleResult }) => {
+const Description = ({ title, description, syntax, basicExample, basicExampleResult, dynamicExample, dynamicExampleResult }) => {
     return (
         <div style={{ padding: '20px' }}>
             <Typography.Title level={2}>{title}</Typography.Title>
@@ -21,13 +21,13 @@ const Description = ({ title, description, syntax, basicExample, basicExampleRes
             <div className="code">
                 {basicExampleResult.map(el => <>{el}<br/></>)}
             </div><br />
-            <Typography.Title level={3}>Использование в цикле:</Typography.Title>
+            <Typography.Title level={3}>Динамическое использование:</Typography.Title>
             <div className="code">
-                {cycleExample.map(el => <>{el}<br/></>)}
+                {dynamicExample.map(el => <>{el}<br/></>)}
             </div><br />
             <Typography.Title level={3}>Результат:</Typography.Title>
             <div className="code">
-                {cycleExampleResult.map(el => <>{el}<br/></>)}
+                {dynamicExampleResult.map(el => <>{el}<br/></>)}
             </div><br />
             <Typography.Paragraph style={{ fontSize: "18px" }}>{description[1]}</Typography.Paragraph>
 

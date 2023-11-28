@@ -10,12 +10,12 @@ const content = [
             "console.log('Удаленный фрукт:', удаленныйФрукт);",
             "console.log('Массив после pop:', fruits);"
         ],
-        basicExampleResult: [ 
+        basicExampleResult: [
             "Удаленный фрукт: апельсин",
             "Массив после pop: [ 'яблоко', 'груша', 'банан' ]"
-            
+
         ],
-        cycleExample: [
+        dynamicExample: [
             "var numbers = [1, 2, 3, 4, 5];",
             "while (numbers.length > 0) {",
             "    var удаленныйЭлемент = numbers.pop();",
@@ -23,7 +23,7 @@ const content = [
             "    console.log('Массив после pop:', numbers);",
             "}"
         ],
-        cycleExampleResult: [
+        dynamicExampleResult: [
             "Удаленный элемент: 5",
             "Массив после pop: [ 1, 2, 3, 4 ]",
             "Удаленный элемент: 4",
@@ -38,12 +38,28 @@ const content = [
     },
     {
         method: "arr.push()",
-        description: "Добавляет один или несколько элементов в конец массива и возвращает новую длину массива.",
-        examples: [
+        description: ["Добавляет один или несколько элементов в конец массива и возвращает новую длину массива.",
+            "Метод push() полезен, когда необходимо динамически расширять массив, добавлять элементы в конец и получать обновленную длину массива."],
+        syntax: "const newLength = массив.push(элемент1, элемент2, ...);",
+        basicExample: [
             "const arr = [1, 2, 3];",
             "const newLength = arr.push(4, 5);",
-            "newLength = 5, arr = [1, 2, 3, 4, 5]"
+            "// newLength = 5, arr = [1, 2, 3, 4, 5]"
         ],
+        basicExampleResult: [
+            "Новая длина массива: 5",
+            "Массив после push: [1, 2, 3, 4, 5]"
+        ],
+        dynamicExample: [
+            "const colors = ['red', 'blue'];",
+            "const addedColors = ['green', 'yellow'];",
+            "const totalLength = colors.push(...addedColors);",
+            "// totalLength = 4, colors = ['red', 'blue', 'green', 'yellow']"
+        ],
+        dynamicExampleResult: [
+            "Новая длина массива: 4",
+            "Массив после push: ['red', 'blue', 'green', 'yellow']"
+        ]
     },
     {
         method: "arr.shift()",

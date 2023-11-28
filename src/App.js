@@ -15,16 +15,16 @@ const App = () => {
   const basicExamples = content.map(item => item.basicExample)
   const basicExampleResults = content.map(item => item.basicExampleResult)
   const syntaxes = content.map(item => item.syntax)
-  const cycleExamples = content.map(item => item.cycleExample)
-  const cycleExampleResults = content.map(item => item.cycleExampleResult)
+  const dynamicExamples = content.map(item => item.dynamicExample)
+  const dynamicExampleResults = content.map(item => item.dynamicExampleResult)
   const [searchedMethods, setSearchedMethods] = useState(methods)
   const [selectedMethod, setSelectedMethod] = useState(methods[0]);
   const [description, setDescription] = useState(descriptions[0]);
   const [syntax, setSyntax] = useState(syntaxes[0]);
   const [basicExample, setBasicExample] = useState(basicExamples[0]);
   const [basicExampleResult, setBasicExampleResult] = useState(basicExampleResults[0]);
-  const [cycleExample, setCycleExample] = useState(cycleExamples[0]);
-  const [cycleExampleResult, setCycleExampleResult] = useState(cycleExampleResults[0]);
+  const [dynamicExample, setDynamicExample] = useState(dynamicExamples[0]);
+  const [dynamicExampleResult, setDynamicExampleResults] = useState(dynamicExampleResults[0]);
 
   const handleMenuSelect = (selectedMethod) => {
     const index = methods.indexOf(selectedMethod);
@@ -33,8 +33,8 @@ const App = () => {
     setBasicExample(basicExamples[index])
     setSyntax(syntaxes[index])
     setBasicExampleResult(basicExampleResults[index])
-    setCycleExample(cycleExamples[index])
-    setCycleExampleResult(cycleExampleResults[index])
+    setDynamicExample(dynamicExamples[index])
+    setDynamicExampleResults(dynamicExampleResults[index])
   };
 
   const handleMenuSearch = (value) => {
@@ -59,8 +59,8 @@ const App = () => {
                   title={selectedMethod}
                   description={description}
                   basicExampleResult={basicExampleResult}
-                  cycleExample={cycleExample}
-                  cycleExampleResult={cycleExampleResult}
+                  dynamicExample={dynamicExample}
+                  dynamicExampleResult={dynamicExampleResult}
                 />
               </Col>
             </Row>
