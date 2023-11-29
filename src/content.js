@@ -63,39 +63,114 @@ const content = [
     },
     {
         method: "arr.shift()",
-        description: "Удаляет первый элемент из массива и возвращает его.",
-        examples: [
-            "const arr = [1, 2, 3];",
-            "const firstElement = arr.shift();",
-            "firstElement = 1, arr = [2, 3]"
+        description: [
+            "Удаляет первый элемент из массива и возвращает его значение.",
+            "Метод shift() полезен, когда необходимо удалить первый элемент из массива и обновить его длину."
         ],
+        syntax: "const removedElement = массив.shift();",
+        basicExample: [
+            "const arr = [1, 2, 3];",
+            "const removedElement = arr.shift();",
+            "// removedElement = 1, arr = [2, 3]"
+        ],
+        basicExampleResult: [
+            "Удаленный элемент: 1",
+            "Массив после shift: [2, 3]"
+        ],
+        dynamicExample: [
+            "const colors = ['red', 'blue', 'green', 'yellow'];",
+            "const removedColor = colors.shift();",
+            "// removedColor = 'red', colors = ['blue', 'green', 'yellow']"
+        ],
+        dynamicExampleResult: [
+            "Удаленный элемент: 'red'",
+            "Массив после shift: ['blue', 'green', 'yellow']"
+        ]
     },
     {
         method: "arr.unshift()",
-        description: "Добавляет один или несколько элементов в начало массива и возвращает новую длину массива.",
-        examples: [
-            "const arr = [2, 3];",
-            "const newLength = arr.unshift(0, 1);",
-            "newLength = 4, arr = [0, 1, 2, 3]"
+        description: [
+            "Добавляет один или несколько элементов в начало массива и возвращает новую длину массива.",
+            "Метод unshift() полезен, когда необходимо динамически расширять массив, добавлять элементы в начало и получать обновленную длину массива."
         ],
+        syntax: "const newLength = массив.unshift(элемент1, элемент2, ...);",
+        basicExample: [
+            "const arr = [1, 2, 3];",
+            "const newLength = arr.unshift(4, 5);",
+            "// newLength = 5, arr = [4, 5, 1, 2, 3]"
+        ],
+        basicExampleResult: [
+            "Новая длина массива: 5",
+            "Массив после unshift: [4, 5, 1, 2, 3]"
+        ],
+        dynamicExample: [
+            "const colors = ['blue', 'green', 'yellow'];",
+            "const addedColors = ['red', 'purple'];",
+            "const totalLength = colors.unshift(...addedColors);",
+            "// totalLength = 5, colors = ['red', 'purple', 'blue', 'green', 'yellow']"
+        ],
+        dynamicExampleResult: [
+            "Новая длина массива: 5",
+            "Массив после unshift: ['red', 'purple', 'blue', 'green', 'yellow']"
+        ]
     },
     {
-        method: "arr.slice(start, end)",
-        description: "Возвращает новый массив, содержащий копию части исходного массива от start до end (не включая end).",
-        examples: [
-            "const arr = [1, 2, 3, 4, 5];",
-            "const slicedArr = arr.slice(1, 4);",
-            "slicedArr = [2, 3, 4]"
+        method: "arr.slice()",
+        description: [
+            "В JavaScript метод slice() используется для извлечения части массива или строки. Этот метод не изменяет исходный массив или строку, а возвращает новый массив или строку, содержащий выбранные элементы.",
+            "Обратите внимание, что slice() не изменяет оригинальный массив или строку. Если вам нужно изменить исходный массив, вы можете использовать метод splice() для удаления или вставки элементов."
         ],
+        syntax: "const newArray = массив.slice(начальныйИндекс, конечныйИндекс);",
+        basicExample: [
+            "const arr = [1, 2, 3, 4, 5];",
+            "const slicedArray = arr.slice(1, 4);",
+            "// slicedArray = [2, 3, 4], arr не изменен",
+            "",
+            "",
+            "let str = 'Hello, World!'",
+            "let slicedStr = str.slice(1, 7);"
+        ],
+        basicExampleResult: [
+            "Новый массив: [2, 3, 4]",
+            "Исходный массив: [1, 2, 3, 4, 5]",
+            "",
+            "console.log(slicedStr); // Вывод: 'ello, '"
+        ],
+        dynamicExample: [
+            "const colors = ['red', 'blue', 'green', 'yellow'];",
+            "const selectedColors = colors.slice(1, 3);",
+            "// selectedColors = ['blue', 'green'], colors не изменен"
+        ],
+        dynamicExampleResult: [
+            "Новый массив: ['blue', 'green']",
+            "Исходный массив: ['red', 'blue', 'green', 'yellow']"
+        ]
     },
     {
         method: "arr.lastIndexOf(element)",
-        description: "Возвращает индекс последнего вхождения элемента в массиве. Если элемент не найден, возвращает -1.",
-        examples: [
-            "const arr = [1, 2, 3, 4, 2];",
-            "const lastIndex = arr.lastIndexOf(2);",
-            "lastIndex = 4"
+        description: [
+            "Метод lastIndexOf() в JavaScript используется для поиска последнего вхождения определенного элемента в массиве или строки. Метод возвращает индекс последнего вхождения элемента или -1, если элемент не найден.",
+            "Метод lastIndexOf() также может принимать второй аргумент, который указывает начальную позицию поиска. Если этот аргумент отрицателен, поиск осуществляется от конца массива или строки.В этом примере поиск начинается с индекса -2, что означает, что будет произведен поиск с конца массива, и первым проверяемым элементом будет 4."
         ],
+        syntax: "const lastIndex = массив.lastIndexOf(искомыйЭлемент, начальныйИндекс);",
+        basicExample: [
+            "const arr = [1, 2, 3, 2, 4, 2, 5];",
+            "const lastIndexOfTwo = arr.lastIndexOf(2);",
+            "// lastIndexOfTwo = 5, т.к. последнее вхождение 2 находится по индексу 5"
+        ],
+        basicExampleResult: [
+            "Последний индекс элемента 2: 5",
+            "Исходный массив: [1, 2, 3, 2, 4, 2, 5]"
+        ],
+        dynamicExample: [
+            "const colors = ['red', 'blue', 'green', 'blue', 'yellow'];",
+            "const lastIndexBlue = colors.lastIndexOf('blue', 3);",
+            "// lastIndexBlue = 1, т.к. последнее вхождение 'blue' до индекса 3 находится по индексу 1"
+        ],
+        dynamicExampleResult: [
+            "Последний индекс элемента 'blue': 1",
+            "Исходный массив: ['red', 'blue', 'green', 'blue', 'yellow']"
+        ]
     },
     {
         method: "arr.join(separator)",
