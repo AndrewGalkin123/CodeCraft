@@ -546,117 +546,338 @@ const content = [
     },
     {
         method: "arr.find(callback)",
-        description: "Возвращает значение первого элемента массива, удовлетворяющего условию, заданному в переданной функции.",
-        examples: [
-            "const arr = [1, 2, 3, 4, 5];",
-            "const firstEven = arr.find(num => num % 2 === 0);",
-            "firstEven = 2"
+        description: [
+            "Метод find() в JavaScript применяется к массивам и используется для поиска первого элемента в массиве, который удовлетворяет заданному условию. Когда элемент найден, find() возвращает его значение, в противном случае возвращается undefined. Этот метод не изменяет оригинальный массив. Синтаксис метода find(): callback - функция, вызываемая для каждого элемента массива. Принимает три аргумента: element (значение текущего элемента), index (индекс текущего элемента), и array (сам массив). thisArg (опциональный) - объект, который будет использоваться как значение this при вызове функции callback. Если этот аргумент не предоставлен, будет использоваться глобальный объект.",
+            "Метод find() полезен, когда необходимо найти первый элемент массива, соответствующий заданному условию.Если ни один элемент не удовлетворяет условию, find() вернет undefined"
         ],
+        syntax: "const result = arr.find(callback(element, index, array), thisArg);",
+        basicExample: [
+            "const numbers = [1, 2, 3, 4, 5];",
+            "const foundNumber = numbers.find(num => num % 2 === 0);",
+            "// foundNumber = 2, так как это первое четное число в массиве"
+        ],
+        basicExampleResult: [
+            "Найденный элемент после find: 2",
+            "Исходный массив: [1, 2, 3, 4, 5]"
+        ],
+        dynamicExample: [
+            "const words = ['apple', 'banana', 'cherry'];",
+            "const foundWord = words.find(word => word.length > 6);",
+            "// foundWord = 'banana', так как это первое слово с длиной более 6 символов"
+        ],
+        dynamicExampleResult: [
+            "Найденный элемент после find: 'banana'",
+            "Исходный массив: ['apple', 'banana', 'cherry']"
+        ]
     },
     {
         method: "arr.findIndex(callback)",
-        description: "Возвращает индекс первого элемента массива, удовлетворяющего условию, заданному в переданной функции. Если элемент не найден, возвращает -1.",
-        examples: [
-            "const arr = [1, 2, 3, 4, 5];",
-            "const indexOfFirstEven = arr.findIndex(num => num % 2 === 0);",
-            "indexOfFirstEven = 1"
+        description: [
+            "Метод findIndex() в JavaScript применяется к массивам и используется для поиска индекса первого элемента в массиве, который удовлетворяет заданному условию. Когда элемент найден, findIndex() возвращает его индекс, в противном случае возвращается -1. Этот метод не изменяет оригинальный массив. Синтаксис метода findIndex(): callback - функция, вызываемая для каждого элемента массива. Принимает три аргумента: element (значение текущего элемента), index (индекс текущего элемента), и array (сам массив). thisArg (опциональный) - объект, который будет использоваться как значение this при вызове функции callback. Если этот аргумент не предоставлен, будет использоваться глобальный объект.",
+            "Метод findIndex() полезен, когда необходимо найти индекс первого элемента массива, соответствующего заданному условию."
         ],
+        syntax: "const index = arr.findIndex(callback(element, index, array), thisArg);",
+        basicExample: [
+            "const numbers = [1, 2, 3, 4, 5];",
+            "const indexOfFirstEven = numbers.findIndex(num => num % 2 === 0);",
+            "// indexOfFirstEven = 1, так как это индекс первого четного числа в массиве"
+        ],
+        basicExampleResult: [
+            "Индекс найденного элемента после findIndex: 1",
+            "Исходный массив: [1, 2, 3, 4, 5]"
+        ],
+        dynamicExample: [
+            "var users = [",
+            "  { id: 1, name: 'Alice' },",
+            "  { id: 2, name: 'Bob' },",
+            "  { id: 3, name: 'Charlie' }",
+            "];",
+            "",
+            "",
+            "let index = users.findIndex(function(user) {",
+            "  return user.id === 2;",
+            "});",
+            "console.log(index);"
+        ],
+        dynamicExampleResult: [
+            "Вывод: 1, так как это индекс первого пользователя с id равным 2"
+        ]
     },
     {
         method: "arr.includes(element)",
-        description: "Проверяет, содержит ли массив указанный элемент. Возвращает true, если элемент найден, иначе false.",
-        examples: [
-            "const arr = [1, 2, 3, 4, 5];",
-            "const includesThree = arr.includes(3);",
-            "includesThree = true"
+        description: [
+            "Метод includes() в JavaScript применяется к массивам и используется для определения того, содержится ли определенный элемент в массиве. Метод возвращает логическое значение true, если элемент найден, и false, если его нет. Синтаксис метода includes(): element - элемент, наличие которого проверяется в массиве, fromIndex (опциональный) - индекс, с которого начинается поиск элемента в массиве. Если этот аргумент не предоставлен, поиск начинается с начала массива. Если отрицателен, индекс считается отсчитываемым с конца массива.",
+            "Метод includes() особенно полезен, когда вам нужно проверить, содержится ли элемент в массиве, и не требуется знать его точный индекс."
         ],
+        syntax: "const isElementIncluded = arr.includes(element, fromIndex);",
+        basicExample: [
+            "const numbers = [1, 2, 3, 4, 5];",
+            "const includesThree = numbers.includes(3);",
+            "// includesThree = true, так как число 3 найдено в массиве"
+        ],
+        basicExampleResult: [
+            "Результат проверки наличия элемента: true",
+            "Исходный массив: [1, 2, 3, 4, 5]"
+        ],
+        dynamicExample: [
+            "const words = ['apple', 'banana', 'cherry'];",
+            "const userInput = prompt('Введите слово для поиска:');",
+            "const isUserInputIncluded = words.includes(userInput);",
+            "// isUserInputIncluded содержит результат проверки наличия введенного пользователем слова в массиве"
+        ],
+        dynamicExampleResult: [
+            "Результат проверки наличия введенного пользователем слова в массиве."
+        ]
     },
     {
         method: "arr.flat(depth)",
-        description: "Создает новый массив, в котором все подмассивы внутри исходного массива объединены в один уровень. Глубина объединения может быть указана с помощью параметра depth.",
-        examples: [
-            "const arr = [1, [2, [3, 4]], 5];",
-            "const flatArray = arr.flat(2);",
-            "flatArray = [1, 2, 3, 4, 5]"
+        description: [
+            "Метод flat() в JavaScript применяется к массивам и используется для `выравнивания` (преобразования) вложенных подмассивов в одномерный массив. Этот метод создает новый массив, в котором вложенные подмассивы удаляются, и их элементы перемещаются в основной массив. Метод flat() поддерживает указание глубины `выравнивания`, определяющей, на сколько уровней вложенности следует применять операцию выравнивания. Синтаксис метода flat(): depth (опциональный) - глубина вложенности, на которой применяется выравнивание. По умолчанию depth равен 1.",
+            "Метод flat() полезен, когда необходимо преобразовать многомерный массив в одномерный."
         ],
+        syntax: "const newArray = arr.flat(depth);",
+        basicExample: [
+            "const nestedArray = [1, [2, [3, [4]]]];",
+            "const flattened = nestedArray.flat(2);",
+            "// flattened = [1, 2, 3, [4]], так как массив выровнен на глубине 2"
+        ],
+        basicExampleResult: [
+            "Результат выравнивания массива на глубине 2: [1, 2, 3, [4]]",
+            "Исходный массив: [1, [2, [3, [4]]]]"
+        ],
+        dynamicExample: [
+            "const multiDimensionalArray = [[1, 2], [3, [4, 5]], [6, [7, [8, 9]]]];",
+            "const userDepth = prompt('Введите глубину выравнивания:');",
+            "const customFlattened = multiDimensionalArray.flat(parseInt(userDepth));",
+            "// customFlattened содержит массив, выровненный на указанной пользователем глубине"
+        ],
+        dynamicExampleResult: [
+            "Результат выравнивания массива на указанной пользователем глубине."
+        ]
     },
     {
         method: "str.trim()",
-        description: "Удаляет пробельные символы с начала и конца строки.",
-        examples: [
-            "const str = '   Hello, World!   ';",
-            "const trimmedStr = str.trim();",
-            "trimmedStr = 'Hello, World!'"
+        description: [
+            "Метод trim() в JavaScript применяется к строкам и используется для удаления пробелов с начала и конца строки (не внутри строки). Этот метод возвращает новую строку, в которой отсутствуют пробелы в начале и в конце оригинальной строки.",
+            "Метод trim() особенно полезен при обработке введенных пользователем данных, когда важно устранить возможные пробелы, введенные случайно перед или после ввода."
         ],
+        syntax: "const trimmedString = строка.trim();",
+        basicExample: [
+            "const stringWithSpaces = '   Hello, World!   ';",
+            "const trimmed = stringWithSpaces.trim();",
+            "// trimmed содержит строку 'Hello, World!', без пробелов в начале и конце"
+        ],
+        basicExampleResult: [
+            "Результат обрезки пробелов: 'Hello, World!'",
+            "Исходная строка: '   Hello, World!   '"
+        ],
+        dynamicExample: [
+            "const userInput = prompt('Введите текст с лишними пробелами:');",
+            "const trimmedUserInput = userInput.trim();",
+            "// trimmedUserInput содержит введенный текст без пробелов в начале и конце"
+        ],
+        dynamicExampleResult: [
+            "Результат обрезки пробелов введенного пользователем текста."
+        ]
     },
     {
         method: "str.substring(start, end)",
-        description: "Возвращает подстроку строки между индексами start и end (не включительно).",
-        examples: [
-            "const str = 'Hello, World!';",
-            "const substring = str.substring(7, 12);",
-            "substring = 'World'"
+        description: [
+            "Метод substring() в JavaScript применяется к строкам и используется для извлечения подстроки из строки. Этот метод возвращает новую строку, начиная с символа с индексом start и заканчивая символом перед индексом end (или до конца строки, если end не указан). Индексы start и end могут быть отрицательными, в таком случае они считаются отсчитываемыми с конца строки. Синтаксис метода substring(): start - индекс символа, с которого начинается подстрока (включительно), end (опциональный) - индекс символа, на котором заканчивается подстрока (не включительно). Если end не указан, подстрока берется до конца строки.",
+            "Метод substring() полезен, когда необходимо извлечь часть строки."
         ],
+        syntax: "const subString = строка.substring(start, end);",
+        basicExample: [
+            "const originalString = 'Hello, World!';",
+            "const sub = originalString.substring(7, 12);",
+            "// sub содержит подстроку 'World', начиная с индекса 7 до 11"
+        ],
+        basicExampleResult: [
+            "Подстрока строки: 'World'",
+            "Исходная строка: 'Hello, World!'"
+        ],
+        dynamicExample: [
+            "const userInput = prompt('Введите текст:');",
+            "const startIdx = prompt('Введите начальный индекс:');",
+            "const endIdx = prompt('Введите конечный индекс:');",
+            "const customSubString = userInput.substring(parseInt(startIdx), parseInt(endIdx));",
+            "// customSubString содержит подстроку введенного текста в указанных пользователем границах"
+        ],
+        dynamicExampleResult: [
+            "Подстрока введенного текста в указанных пользователем границах."
+        ]
     },
     {
         method: "str.substr(start, length)",
-        description: "Возвращает подстроку строки, начиная с индекса start и имеющую длину length.",
-        examples: [
-            "const str = 'Hello, World!';",
-            "const substr = str.substr(7, 5);",
-            "substr = 'World'"
+        description: [
+            "Метод substr() в JavaScript применяется к строкам и используется для извлечения подстроки из строки. Этот метод возвращает новую строку, начиная с символа с индексом start и имеющую длину length. Индекс start может быть отрицательным, в таком случае он считается отсчитываемым с конца строки. Если length не указан, возвращается подстрока, начиная с символа с индексом start и до конца строки. Синтаксис метода substr(): start - индекс символа, с которого начинается подстрока, length (опциональный) - длина подстроки. Если length не указан, возвращается подстрока от start до конца строки.",
+            "Метод substr() полезен, когда необходимо извлечь фиксированное количество символов из строки."
         ],
+        syntax: "const substring = str.substr(start, length);",
+        basicExample: [
+            "const originalString = 'Hello, World!';",
+            "const sub = originalString.substr(7, 5);",
+            "// sub содержит подстроку 'World', начиная с индекса 7 и имеющую длину 5"
+        ],
+        basicExampleResult: [
+            "Подстрока строки: 'World'",
+            "Исходная строка: 'Hello, World!'"
+        ],
+        dynamicExample: [
+            "const userInput = prompt('Введите текст:');",
+            "const startIdx = prompt('Введите начальный индекс:');",
+            "const subLength = prompt('Введите длину подстроки:');",
+            "const customSubString = userInput.substr(parseInt(startIdx), parseInt(subLength));",
+            "// customSubString содержит подстроку введенного текста в указанных пользователем границах"
+        ],
+        dynamicExampleResult: [
+            "Подстрока введенного текста в указанных пользователем границах."
+        ]
     },
     {
         method: "str.replace(searchValue, replaceValue)",
-        description: "Заменяет первое вхождение searchValue в строке на replaceValue.",
-        examples: [
-            "const str = 'Hello, World!';",
-            "const replacedStr = str.replace('World', 'GPT');",
-            "replacedStr = 'Hello, GPT!'"
+        description: [
+            "Метод replace() в JavaScript применяется к строкам и используется для замены подстроки или совпадения с шаблоном другой строкой. Этот метод возвращает новую строку, в которой первое совпадение с searchValue заменено на replaceValue. Если searchValue является регулярным выражением, то будет заменено первое совпадение. Синтаксис метода replace(): searchValue - подстрока или регулярное выражение, которое необходимо заменить, replaceValue - строка, которой будет заменено найденное совпадение.",
+            "Метод replace() полезен, когда необходимо выполнить замену части строки. Обратите внимание, что метод replace() не изменяет оригинальную строку, а возвращает новую строку с внесенными изменениями."
         ],
+        syntax: "const newString = str.replace(searchValue, replaceValue);",
+        basicExample: [
+            "const originalString = 'Hello, World!';",
+            "const replacedString = originalString.replace('World', 'Universe');",
+            "// replacedString содержит 'Hello, Universe!', так как 'World' заменено на 'Universe'"
+        ],
+        basicExampleResult: [
+            "Строка после замены: 'Hello, Universe!'",
+            "Исходная строка: 'Hello, World!'"
+        ],
+        dynamicExample: [
+            "const userInput = prompt('Введите текст:');",
+            "const searchValue = prompt('Введите значение для замены:');",
+            "const replaceValue = prompt('Введите новое значение:');",
+            "const customReplacedString = userInput.replace(searchValue, replaceValue);",
+            "// customReplacedString содержит строку с замененным значением введенным пользователем"
+        ],
+        dynamicExampleResult: [
+            "Строка с замененным значением введенным пользователем."
+        ]
     },
     {
         method: "str.split(separator)",
-        description: "Разделяет строку на массив подстрок, используя указанный разделитель.",
-        examples: [
-            "const str = 'apple,orange,banana';",
-            "const fruitArray = str.split(',');",
-            "fruitArray = ['apple', 'orange', 'banana']"
+        description: [
+            "Метод split() в JavaScript применяется к строкам и используется для разделения строки на массив подстрок по указанному разделителю. Этот метод возвращает массив строк, полученных путем разделения исходной строки на части с использованием заданного разделителя. Синтаксис метода split(): separator - строка или регулярное выражение, используемые для определения места разделения строки. Если separator не указан, весь текст будет считаться одной подстрокой, limit (опциональный) - максимальное количество элементов в возвращаемом массиве. Если limit указан, метод вернет не более, чем limit - 1 элементов. Если limit не указан, метод вернет все возможные элементы.",
+            "Метод split() полезен, когда необходимо разделить строку на части для дальнейшей обработки."
         ],
+        syntax: "var arrayOfStrings = str.split(separator, limit);",
+        basicExample: [
+            "let sentence = 'Hello, World! How are you doing today?'",
+            "let wordsArrayLimited = sentence.split(' ', 3)",
+            "console.log(wordsArrayLimited);"
+        ],
+        basicExampleResult: [
+            "// Вывод: ['Hello,', 'World!', 'How']",
+        ],
+        dynamicExample: [
+            "const csvData = prompt('Введите данные в формате CSV:');",
+            "const dataArray = csvData.split(',');",
+            "// dataArray содержит массив данных, разделенных запятыми, введенных пользователем"
+        ],
+        dynamicExampleResult: [
+            "Массив данных после разделения введенных пользователем данных."
+        ]
     },
     {
         method: "Math.random()",
-        description: "Возвращает псевдослучайное число от 0 (включительно) до 1 (не включительно).",
-        examples: [
-            "const randomNum = Math.random();",
-            "// Example output: 0.8543713276878362"
+        description: [
+            "Math.random() в JavaScript - это метод объекта Math, который возвращает псевдослучайное число с плавающей точкой в интервале от 0 (включительно) до 1 (исключительно). То есть, возвращаемое число будет больше или равно 0, но меньше 1. Если вам нужно получить случайное число в определенном диапазоне, вы можете использовать формулу, умножив результат Math.random() на длину вашего диапазона и добавив минимальное значение:",
+            "Метод Math.random() полезен, когда необходимо генерировать случайные значения."
         ],
+        syntax: "const randomValue = Math.random();",
+        basicExample: [
+            "const randomNumber = Math.random();",
+            "// randomNumber содержит случайное число между 0 (включительно) и 1 (исключительно)"
+        ],
+        basicExampleResult: [
+            "Случайное число в диапазоне [0, 1)"
+        ],
+        dynamicExample: [
+            "const min = parseInt(prompt('Введите минимальное значение:'));",
+            "const max = parseInt(prompt('Введите максимальное значение:'));",
+            "const randomInRange = min + Math.random() * (max - min);",
+            "// randomInRange содержит случайное число в пользовательском диапазоне"
+        ],
+        dynamicExampleResult: [
+            "Случайное число в пользовательском числовом диапазоне."
+        ]
     },
     {
         method: "Math.floor(num)",
-        description: "Возвращает наибольшее целое число, меньшее или равное указанному числу.",
-        examples: [
-            "const roundedDown = Math.floor(3.8);",
-            "roundedDown = 3"
+        description: [
+            "Math.floor() в JavaScript - это метод объекта Math, который используется для округления числа вниз до ближайшего целого числа. Он отбрасывает десятичную часть числа, оставляя только целую часть.",
+            "Math.floor() часто используется в комбинации с Math.random(), чтобы получить случайное целое число в определенном диапазоне. Метод Math.floor() полезен, когда необходимо получить наибольшее целое число, которое меньше или равно заданному числу."
         ],
+        syntax: "const roundedDown = Math.floor(num);",
+        basicExample: [
+            "const roundedDownValue = Math.floor(7.8);",
+            "// roundedDownValue содержит 7, так как 7.8 округлено вниз до ближайшего целого"
+        ],
+        basicExampleResult: [
+            "Округленное вниз значение: 7"
+        ],
+        dynamicExample: [
+            "const userInput = parseFloat(prompt('Введите десятичное число:'));",
+            "const roundedUserInputDown = Math.floor(userInput);",
+            "// roundedUserInputDown содержит наибольшее целое число, меньшее или равное введенному пользователем числу"
+        ],
+        dynamicExampleResult: [
+            "Наибольшее целое число, меньшее или равное введенному пользователем числу."
+        ]
     },
     {
         method: "Math.ceil(num)",
-        description: "Возвращает наименьшее целое число, большее или равное указанному числу.",
-        examples: [
-            "const roundedUp = Math.ceil(3.2);",
-            "roundedUp = 4"
+        description: [
+            "Math.ceil() в JavaScript - это метод объекта Math, который используется для округления числа вверх до ближайшего целого числа. Этот метод всегда возвращает наименьшее целое число, которое больше или равно заданному числу.",
+            "Math.ceil() также может быть полезен при работе с Math.random(), чтобы получить случайное целое число в определенном диапазоне. Метод Math.ceil() полезен, когда необходимо получить наименьшее целое число, которое больше или равно заданному числу."
         ],
+        syntax: "const roundedUp = Math.ceil(num);",
+        basicExample: [
+            "const roundedUpValue = Math.ceil(4.2);",
+            "// roundedUpValue содержит 5, так как 4.2 округлено вверх до ближайшего целого"
+        ],
+        basicExampleResult: [
+            "Округленное вверх значение: 5"
+        ],
+        dynamicExample: [
+            "const userInput = parseFloat(prompt('Введите десятичное число:'));",
+            "const roundedUserInputUp = Math.ceil(userInput);",
+            "// roundedUserInputUp содержит наименьшее целое число, большее или равное введенному пользователем числу"
+        ],
+        dynamicExampleResult: [
+            "Наименьшее целое число, большее или равное введенному пользователем числу."
+        ]
     },
     {
         method: "Math.round(num)",
-        description: "Возвращает ближайшее целое число, округляя вверх или вниз в зависимости от десятичной части.",
-        examples: [
-            "const rounded = Math.round(3.5);",
-            "rounded = 4"
+        description: [
+            "Math.round() в JavaScript - это метод объекта Math, который используется для округления числа до ближайшего целого числа. При половине и больше, значение округляется вверх, а при менее чем половине - вниз.",
+            "Метод Math.round() полезен, когда необходимо получить ближайшее целое число."
         ],
-    }
+        syntax: "const roundedNumber = Math.round(num);",
+        basicExample: [
+            "const roundedValue = Math.round(3.7);",
+            "// roundedValue содержит 4, так как 3.7 округлено до ближайшего целого"
+        ],
+        basicExampleResult: [
+            "Ближайшее целое число: 4"
+        ],
+        dynamicExample: [
+            "const userInput = parseFloat(prompt('Введите десятичное число:'));",
+            "const roundedUserInput = Math.round(userInput);",
+            "// roundedUserInput содержит ближайшее целое число к введенному пользователем числу"
+        ],
+        dynamicExampleResult: [
+            "Ближайшее целое число к введенному пользователем числу."
+        ]
+    }    
 ];
 
 export default content;
