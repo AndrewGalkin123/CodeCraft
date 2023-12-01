@@ -7,6 +7,7 @@ import Description from './components/Description';
 import AboutUs from './pages/AboutUs';
 import content from './content';
 import "./App.css"
+import MoreInfo from './pages/MoreInfo';
 
 
 const App = () => {
@@ -68,6 +69,7 @@ const App = () => {
         }>
         </Route>
         <Route path='/about-us' element={<AboutUs />} />
+        <Route path='/more-info' element={<MoreInfo />} />
       </Routes>
     </Router>
   );
