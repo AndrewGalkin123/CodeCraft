@@ -13,3 +13,20 @@
     white-space: pre-wrap;
 
 }
+
+.social-icons {
+    font-size: 26px;
+    /* Размер иконок */
+}
+
+.social-icons a {
+    margin-left: 10px;
+    color: #000000;
+    /* Цвет иконок */
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #0074cc;
+    /* Цвет при наведении на иконки */
+}

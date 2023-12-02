@@ -1,12 +1,12 @@
 import Header from "../components/Header"
-import Navigation from "../components/Navigation"
-
+import AboutUsBlock from "../components/AbousUsBlock"
+import logo from "./панда.jpg"
 
 const AboutUs = () => {
-    return(
+    return (
         <>
-        <Header title="CodeCraft"/>
-        
+            <Header title="CodeCraft" />
+            <AboutUsBlock image={logo}/>
         </>
     )
 }
