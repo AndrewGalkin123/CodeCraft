@@ -15,19 +15,19 @@ const Description = ({ title, description, syntax, basicExample, basicExampleRes
             </div><br></br>
             <Typography.Title level={3}>Базовый пример:</Typography.Title>
             <div className="code">
-                {basicExample.map(el => <>{el}<br/></>)}
+                {basicExample.map(el => <div key={el}>{el}<br/></div>)}
             </div><br />
             <Typography.Title level={3}>Результат:</Typography.Title>
             <div className="code">
-                {basicExampleResult.map(el => <>{el}<br/></>)}
+                {basicExampleResult.map(el => <div key={el}>{el}<br/></div>)}
             </div><br />
             <Typography.Title level={3}>Динамическое использование:</Typography.Title>
             <div className="code">
-                {dynamicExample.map(el => <>{el}<br/></>)}
+                {dynamicExample.map(el => <div key={el}>{el}<br/></div>)}
             </div><br />
             <Typography.Title level={3}>Результат:</Typography.Title>
             <div className="code">
-                {dynamicExampleResult.map(el => <>{el}<br/></>)}
+                {dynamicExampleResult.map(el => <div key={el}>{el}<br/></div>)}
             </div><br />
             <Typography.Paragraph style={{ fontSize: "18px" }}>{description[1]}</Typography.Paragraph>
 
