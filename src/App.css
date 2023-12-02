@@ -4,6 +4,10 @@
 
 }
 
+a {
+    text-decoration: none;
+}
+
 .code {
     font-family: 'Courier New', monospace;
     background-color: #f4f4f4;
