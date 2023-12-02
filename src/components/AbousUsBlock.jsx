@@ -1,6 +1,6 @@
 import { Row, Col, Divider, Typography, Flex } from "antd"
 
-const { Text, Paragraph, Title } = Typography;
+const {  Paragraph, Title } = Typography;
 
 const AboutUsBlock = ({ image }) => {
     return (

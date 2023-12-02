@@ -9,7 +9,7 @@ const items = [
         title: <a href="/about-us">About us</a>,
     },
     {   
-        title: <a href="">More info</a>,
+        title: <a href="/more-info">More info</a>,
     }
 ];
 
