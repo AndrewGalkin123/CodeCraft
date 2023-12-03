@@ -1,4 +1,4 @@
-import { Row, Col, Divider, Typography, Flex } from "antd"
+import { Row, Col, Divider, Typography } from "antd"
 
 const { Paragraph, Title } = Typography;
 
