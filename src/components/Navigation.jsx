@@ -1,20 +1,7 @@
 import { Breadcrumb } from 'antd'
 
+const Navigation = ({items}) => {
 
-const items = [
-    {
-        title: <a href="/">Home</a>,
-    },
-    {   
-        title: <a href="/about-us">About us</a>,
-    },
-    {   
-        title: <a href="/more-info">More info</a>,
-    }
-];
-
-
-const Navigation = () => {
     return (
         <Breadcrumb  items={items} />
     )

@@ -8,7 +8,7 @@ import AboutUs from './pages/AboutUs';
 import content from './content';
 import "./App.css"
 import MoreInfo from './pages/MoreInfo';
-
+import CoursesPage from './pages/Courses/CorsesPage';
 
 const App = () => {
   const methods = content.map(item => item.method);
@@ -47,7 +47,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={
           <>
-            <Header search={handleMenuSearch} title="CodeCraft" />
+            <Header search={handleMenuSearch}/>
             <Row>
               <Col xs={10} md={3}>
                 <_Menu methods={searchedMethods} onSelect={handleMenuSelect} />
@@ -70,6 +70,7 @@ const App = () => {
         </Route>
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/more-info' element={<MoreInfo />} />
+        <Route path='/courses' element={<CoursesPage/>}/>
       </Routes>
     </Router>
   );

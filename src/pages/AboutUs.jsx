@@ -5,7 +5,7 @@ import logo from "./панда.jpg"
 const AboutUs = () => {
     return (
         <>
-            <Header title="CodeCraft" />
+            <Header/>
             <AboutUsBlock image={logo}/>
         </>
     )
