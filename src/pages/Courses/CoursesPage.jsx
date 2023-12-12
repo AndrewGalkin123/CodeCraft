@@ -21,6 +21,7 @@ const CoursesPage = () => {
                     
                     <Content
                         videoURL={videoURl}
+                        introduction="bsadaad"
                     />
                 </Col>
             </Row>
