@@ -2,7 +2,7 @@ import { Row, Col, Divider, Typography, Flex } from "antd"
 
 const {  Paragraph, Title } = Typography;
 
-const AboutUsBlock = ({ image }) => {
+const AboutUsBlock = () => {
     return (
         <Row>
             <Divider />

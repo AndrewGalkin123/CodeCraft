@@ -6,9 +6,7 @@ const Description = ({ title, description, syntax, basicExample, basicExampleRes
             <Typography.Title level={2}>{title}</Typography.Title>
             <Divider />
             <Typography.Paragraph style={{ fontSize: "18px" }}>{description[0]}</Typography.Paragraph>
-
-
-
+            
             <Typography.Title level={3}>Синтаксис:</Typography.Title>
             <div className='code'>
                 {syntax}

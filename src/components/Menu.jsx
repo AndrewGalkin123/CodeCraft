@@ -8,7 +8,7 @@ const _Menu = ({ methods, onSelect }) => {
     };
 
     return (
-        <div style={{ height: '100vh', overflowY: 'auto' }}>
+        <div style={{ height: '120vh', overflowY: 'auto' }}>
             <Menu
                 mode="vertical"
                 defaultSelectedKeys={['1']}

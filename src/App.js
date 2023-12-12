@@ -8,7 +8,7 @@ import AboutUs from './pages/AboutUs';
 import content from './content';
 import "./App.css"
 import MoreInfo from './pages/MoreInfo';
-import CoursesPage from './pages/Courses/CorsesPage';
+import CoursesPage from './pages/Courses/CoursesPage';
 
 const App = () => {
   const methods = content.map(item => item.method);
