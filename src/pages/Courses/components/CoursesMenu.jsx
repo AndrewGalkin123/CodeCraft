@@ -9,7 +9,7 @@ const { Item, SubMenu } = Menu;
 
 const CoursesMenu = () => {
   return (
-      <Menu  style={{ width: 256 }} mode="inline">
+      <Menu style={{height: "100%"}}  mode="inline">
         <SubMenu key={"HTML"} icon={<Html5Outlined />} title="HTML">
           <Item key="9">Option 9</Item>
           <Item key="10">Option 10</Item>

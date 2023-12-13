@@ -13,7 +13,7 @@ const CoursesPage = () => {
             <Header/>
             <Divider/>
            
-            <Row>
+            <Row >
                 <Col xs={10} md={3}>
                     <CoursesMenu/>
                 </Col>
@@ -22,8 +22,11 @@ const CoursesPage = () => {
                     <Content
                         videoURL={videoURl}
                         introduction="bsadaad"
+                        title="#1 – Что такое HTML5?"
+                        paragraph1="Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, qui. Dolores fugit cupiditate pariatur nam rem repellendus earum aliquid consectetur non porro optio atque omnis veniam, laborum velit voluptas minima.Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, qui. Dolores fugit cupiditate pariatur nam rem repellendus earum aliquid consectetur non porro optio atque omnis veniam, laborum velit voluptas minima.Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, qui. Dolores fugit cupiditate pariatur nam rem repellendus earum aliquid consectetur non porro optio atque omnis veniam, laborum velit voluptas minima.Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, qui. Dolores fugit cupiditate pariatur nam rem repellendus earum aliquid consectetur non porro optio atque omnis veniam, laborum velit voluptas minima.Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, qui. Dolores fugit cupiditate pariatur nam rem repellendus earum aliquid consectetur non porro optio atque omnis veniam, laborum velit voluptas minima."
                     />
                 </Col>
+                
             </Row>
             
         </>
