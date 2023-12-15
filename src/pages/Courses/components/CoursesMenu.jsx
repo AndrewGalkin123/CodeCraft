@@ -1,24 +1,25 @@
+
 import { Menu } from 'antd';
 import { Html5Outlined, BgColorsOutlined, CodeOutlined, 
         ExperimentOutlined, GithubOutlined, GoogleOutlined,
         AntDesignOutlined } from '@ant-design/icons';
 
 const { Item, SubMenu } = Menu;
+const CoursesMenu = ({ onMenuItemClick }) => {
 
-const CoursesMenu = ({ onSelect }) => {
-  const handleMenuClick = ({ key }) => {
-    onSelect(key);
-  };
+  
   return (
-      <Menu style={{height: "100%"}}  mode="inline"  >
-        <SubMenu key={"HTML"} icon={<Html5Outlined />} title="HTML">
-          <Item key="htmlLesson1">Option 9</Item>
-          <Item key="htmlLesson2">Option 10</Item>
-          <Item key="htmlLesson3">Option 11</Item>
-          <Item key="htmlLesson4">Option 12</Item> 
+    <Menu
+      style={{ height: "100%" }}
+      mode="inline" onClick={(e) => onMenuItemClick(e.keyPath)}>
+        <SubMenu key={"HTML"} icon={<Html5Outlined />}    title="HTML">
+        <Item key="htmlLesson1"  >Урок 1</Item>
+        <Item key="htmlLesson2">Урок 2</Item>
+        <Item key="htmlLesson3">Урок 3</Item>
+        <Item key="htmlLesson4">Урок 4</Item> 
         </SubMenu>
         <SubMenu key="CSS" icon={<BgColorsOutlined />} title="CSS">
-          <Item key="cssLesson1">Option 9</Item>
+          <Item key="cssLesson1" >Option 9</Item>
           <Item key="cssLesson2">Option 10</Item>
           <Item key="cssLesson3">Option 11</Item>
           <Item key="cssLesson4">Option 12</Item> 
@@ -56,6 +57,7 @@ const CoursesMenu = ({ onSelect }) => {
       </Menu>
 
   );
+  
 };
 
 export default CoursesMenu;
