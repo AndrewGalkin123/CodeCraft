@@ -1,7 +1,7 @@
 import {Typography, Row, Col } from 'antd'
 import Navigation from './Navigation'
 
-const Header = ({title}) => {
+const Header = () => {
   
     const items = [
         {
