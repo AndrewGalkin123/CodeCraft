@@ -49,11 +49,11 @@ const App = () => {
           <div className='content'>
             <Header search={handleMenuSearch}/>
             <Row>
-              <Col xs={10} md={3}>
+              <Col md={3} >
                 <_Menu methods={searchedMethods} onSelect={handleMenuSelect} />
 
               </Col>
-              <Col xs={14} md={21}>
+              <Col md={21}>
                 <Description
                   syntax={syntax}
                   basicExample={basicExample}

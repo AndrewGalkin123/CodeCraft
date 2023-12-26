@@ -6,6 +6,7 @@ const _Menu = ({ methods, onSelect }) => {
         const selectedMethod = e.key;
         onSelect(selectedMethod);
     };
+    // const isMobile = window.innerWidth <= 768;
 
     return (
         <div style={{ height: '100vh', overflowY: 'auto' }}>
