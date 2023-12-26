@@ -6,7 +6,7 @@ const MoreInfoBlock = () => {
     const paragraphStyle = { fontSize: '16px' }
 
     return (
-        <Row>
+        <Row className="content">
             <Divider />
             <Col md={{ span: 20, offset: 3 }}>
                 <Title level={3}>Дополнительная информация (More Info)</Title>

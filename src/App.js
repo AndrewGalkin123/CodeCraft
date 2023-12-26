@@ -46,7 +46,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path='/' element={
-          <>
+          <div className='content'>
             <Header search={handleMenuSearch}/>
             <Row>
               <Col xs={10} md={3}>
@@ -65,7 +65,7 @@ const App = () => {
                 />
               </Col>
             </Row>
-          </>
+          </div>
         }>
         </Route>
         <Route path='/about-us' element={<AboutUs />} />

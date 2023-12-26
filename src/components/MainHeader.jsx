@@ -8,7 +8,7 @@ const MainHeader = ({ search }) => {
         <>
            <Header/>
             <Search
-                style={{width: "98%", margin: "0 20px"}}
+                style={{width: "100%"}}
                 placeholder="Search methods"
                 allowClear
                 enterButton="Search"

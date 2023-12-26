@@ -4,7 +4,7 @@ const {  Paragraph, Title } = Typography;
 
 const AboutUsBlock = () => {
     return (
-        <Row>
+        <Row className="content">
             <Divider />
             <Col xs={24} md={{ span: 16, offset: 5 }}>
                 <Title level={3}>О нас: CodeCraft</Title>
